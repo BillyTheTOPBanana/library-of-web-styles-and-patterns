@@ -1,0 +1,37 @@
+@import "import/reset.css";
+
+.example-container {
+    margin: 10px;
+}
+
+.image-with-banner-1 {
+    width: fit-content;
+    position: relative;
+
+    /* Title banner */
+    div:first-of-type {
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        
+        background-color: hsl(0 0 0 / .45);
+        color: hsl(0 0 95%);
+        font-size: 2rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Bottom caption */
+    div:last-of-type {
+        position: absolute;
+        width: 100%;
+        bottom: 1.2rem;
+
+        color: hsl(0 0 95%);
+        font-size: .8rem;
+
+        text-align: center;
+    }
+}
