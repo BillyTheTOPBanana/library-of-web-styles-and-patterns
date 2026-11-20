@@ -1,3 +1,8 @@
+/*
+I am using BEM naming conventions as described at the top of this CSS-Tricks article:
+https://css-tricks.com/bem-101/
+*/
+
 @import "import/reset.css";
 
 .example-container {
@@ -7,31 +12,29 @@
 .image-with-banner-1 {
     width: fit-content;
     position: relative;
+}
 
-    /* Title banner */
-    div:first-of-type {
-        position: absolute;
-        width: 100%;
-        top: 20%;
-        
-        background-color: hsl(0 0 0 / .45);
-        color: hsl(0 0 95%);
-        font-size: 2rem;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.image-with-banner-1__banner {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    
+    background-color: hsl(0 0 0 / .45);
+    color: hsl(0 0 95%);
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    /* Bottom caption */
-    div:last-of-type {
-        position: absolute;
-        width: 100%;
-        bottom: 1.2rem;
+.image-with-banner-1__photo-credit {
+    position: absolute;
+    width: 100%;
+    bottom: 1.2rem;
 
-        color: hsl(0 0 95%);
-        font-size: .8rem;
+    color: hsl(0 0 95%);
+    font-size: .8rem;
 
-        text-align: center;
-    }
+    text-align: center;
 }
