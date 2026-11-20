@@ -38,3 +38,37 @@ https://css-tricks.com/bem-101/
 
     text-align: center;
 }
+
+
+/*
+Note this module uses relative colors (with the `from` keyword).
+As of Nov 2026, relative colors are not supported in IE.
+*/
+.btn1 {
+    --base-size: 1rem;
+    font-size: var(--base-size);
+    padding: var(--base-size) calc(5 * var(--base-size));
+    border-radius: calc(.6 * var(--base-size));
+    
+    border: none;
+    font-weight: bold;
+
+    --base-color: hsl(240 100% 20%);
+    background-color: var(--base-color);
+    color: hsl(0 0 97%);
+    box-shadow: 3px 3px 2px hsl(0 0 60% / .3);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1:hover {
+    background-color: hsl(from var(--base-color) h 58% 38%);
+    
+    cursor: pointer;
+}
+
+.btn1:active {
+    background-color: hsl(from var(--base-color) h 80% 70%);
+}
